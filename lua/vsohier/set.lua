@@ -24,7 +24,6 @@ vim.opt.signcolumn="yes"
 vim.opt.updatetime=750
 vim.opt.termguicolors=true
 vim.opt.updatetime = 50
-vim.opt.clipboard = "+"
 
 vim.api.nvim_create_autocmd(
 	{
