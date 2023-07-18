@@ -26,8 +26,8 @@ return require('packer').startup(function(use)
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
 		requires = {
-				{'neovim/nvim-lspconfig'},             -- Required
-				{                                      -- Optional
+			{'neovim/nvim-lspconfig'},             -- Required
+			{                                      -- Optional
 				'williamboman/mason.nvim',
 				run = function()
 					pcall(vim.cmd, 'MasonUpdate')
@@ -42,7 +42,8 @@ return require('packer').startup(function(use)
 	use {
 		'rcarriga/nvim-dap-ui',
 		requires = {
-			'mfussenegger/nvim-dap'
+			'mfussenegger/nvim-dap',
+			'jay-babu/mason-nvim-dap.nvim'
 		}
 	}
 	use {'nvim-telescope/telescope-dap.nvim'}
