@@ -2,6 +2,7 @@ local dap = require('dap')
 local dapuiwidgets = require('dap.ui.widgets')
 local dapui = require('dapui')
 local telescope = require('telescope')
+
 dapui.setup()
 telescope.setup()
 telescope.load_extension('dap')
