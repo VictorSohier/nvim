@@ -1,5 +1,4 @@
-require('mason').setup({
-})
+require('mason').setup()
 require('mason-lspconfig').setup()
 require('mason-nvim-dap').setup({
 	handlers = {
@@ -11,7 +10,13 @@ require('mason-nvim-dap').setup({
 				"file"
 				)
 			end
-
+			config.configurations[1].cwd = function()
+				return vim.fn.input(
+				"Working Directory: ",
+				vim.fn.getcwd(),
+				"file"
+				)
+			end
 			require('mason-nvim-dap').default_setup(config)
 		end
 	}
