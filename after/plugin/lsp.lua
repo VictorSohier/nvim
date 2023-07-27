@@ -1,7 +1,8 @@
-local lsp = require('lsp-zero').preset({})
+local lspZero = require('lsp-zero').preset({})
+local lsp = require('lspconfig')
 
-lsp.on_attach(function(client, bufnr)
-	lsp.default_keymaps({buffer = bufnr})
+lspZero.on_attach(function(client, bufnr)
+	lspZero.default_keymaps({buffer = bufnr})
 	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
 	vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end)
 	vim.keymap.set("n", "gh", function() vim.lsp.buf.hover() end)
@@ -11,9 +12,39 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 -- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+lsp.lua_ls.setup(lspZero.nvim_lua_ls())
 
-lsp.setup()
+lsp.omnisharp.setup {
+	filetypes = {
+		"cs",
+		"vb",
+		"cshtml",
+		"razor"
+	}
+}
+
+lsp.emmet_ls.setup {
+	filetypes = {
+		"astro",
+		"css",
+		"eruby",
+		"html",
+		"htmldjango",
+		"javascript",
+		"javascriptreact",
+		"less",
+		"pug",
+		"sass",
+		"scss",
+		"svelte",
+		"typescriptreact",
+		"vue",
+		"cshtml",
+		"razor"
+	}
+}
+
+lspZero.setup()
 
 local cmp = require'cmp'
 cmp.setup {
