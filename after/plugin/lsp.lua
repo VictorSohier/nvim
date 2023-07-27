@@ -19,7 +19,8 @@ lsp.omnisharp.setup {
 		"cs",
 		"vb",
 		"cshtml",
-		"razor"
+		"razor",
+		"aspnetcorerazor"
 	}
 }
 
@@ -40,7 +41,8 @@ lsp.emmet_ls.setup {
 		"typescriptreact",
 		"vue",
 		"cshtml",
-		"razor"
+		"razor",
+		"aspnetcorerazor"
 	}
 }
 
