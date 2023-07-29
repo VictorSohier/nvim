@@ -19,6 +19,15 @@ return require('packer').startup(function(use)
 			run = 'TSUpdate'
 		}
 	})
+	use ({
+		'nvim-treesitter/nvim-treesitter-context',
+		requires = {
+			'nvim-treesitter/nvim-treesitter',
+		},
+		{
+			run = 'TSUpdate'
+		}
+	})
 	use('tpope/vim-fugitive')
 	use('tpope/vim-commentary')
 	use('airblade/vim-gitgutter')
@@ -49,23 +58,7 @@ return require('packer').startup(function(use)
 	use {'nvim-telescope/telescope-dap.nvim'}
 	use {'fidian/hexmode'}
 	use {'christoomey/vim-tmux-navigator'}
-	--use {
-	--	--'jiangmiao/auto-pairs'
-	--	'windwp/nvim-autopairs',
-	--	config = function()
-	--		require("nvim-autopairs").setup{}
-	--	end
-	--}
---	use {
---		'itchyny/vim-gitbranch',
---		requires = {
---			'itchyny/lightline.vim'
---		}
---	}
 	use {
 		'nvim-lualine/lualine.nvim'
-	}
-	use {
-		'wellle/context.vim'
 	}
 end)
