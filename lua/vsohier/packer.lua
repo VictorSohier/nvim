@@ -65,4 +65,7 @@ return require('packer').startup(function(use)
 	use {
 		'nvim-lualine/lualine.nvim'
 	}
+	use {
+		'wellle/context.vim'
+	}
 end)
