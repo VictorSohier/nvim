@@ -14,19 +14,15 @@ return require('packer').startup(function(use)
 		end
 	})
 	use ({
-		'nvim-treesitter/nvim-treesitter',
-		{
-			run = 'TSUpdate'
-		}
-	})
-	use ({
-		'nvim-treesitter/nvim-treesitter-context',
+	 	'nvim-treesitter/nvim-treesitter-context',
 		requires = {
-			'nvim-treesitter/nvim-treesitter',
+			{
+				'nvim-treesitter/nvim-treesitter',
+				{
+					run = 'TSUpdate'
+				}
+			}
 		},
-		{
-			run = 'TSUpdate'
-		}
 	})
 	use('tpope/vim-fugitive')
 	use('tpope/vim-commentary')

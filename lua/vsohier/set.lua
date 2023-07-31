@@ -1,3 +1,6 @@
+vim.cmd([[
+let c_syntax_for_h = 1
+]])
 vim.o.guicursor = ""
 vim.o.encoding = "utf-8"
 vim.o.completeopt = "menuone,noinsert,noselect"
